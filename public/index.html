@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Customer Management System</h1>
+
+        <!-- Customer Form -->
+        <div class="form-container">
+
+            <h2 id="formTitle">Add Customer</h2>
+
+            <form id="customerForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Customer Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="phone"
+                    placeholder="Phone Number"
+                    required
+                >
+
+                <button type="submit" id="submitBtn">
+                    Add Customer
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelBtn"
+                    class="cancel"
+                    onclick="cancelEdit()"
+                >
+                    Cancel
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Customer List -->
+
+        <div class="customers-container">
+
+            <h2>Customer List</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="customerList">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
