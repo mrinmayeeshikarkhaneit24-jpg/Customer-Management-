@@ -14,7 +14,24 @@
 
     <div class="container">
 
-        <h1>Customer Management System</h1>
+        
+        <header class="page-header">
+            <h1>Customer Management System</h1>
+            <p>Manage your customer records easily in one place.</p>
+        </header>
+
+        
+        <div class="dashboard-cards">
+            <div class="dashboard-card">
+                <p>Total Customers</p>
+                <h2 id="totalCustomers">0</h2>
+            </div>
+
+            <div class="dashboard-card">
+                <p>Matching Customers</p>
+                <h2 id="matchingCustomers">0</h2>
+            </div>
+        </div>
 
         <!-- Customer Form -->
         <div class="form-container">
@@ -38,9 +55,10 @@
                 >
 
                 <input
-                    type="text"
+                    type="tel"
                     id="phone"
                     placeholder="Phone Number"
+                    maxlength="10"
                     required
                 >
 
@@ -66,7 +84,32 @@
 
         <div class="customers-container">
 
-            <h2>Customer List</h2>
+            <div class="list-header">
+                <h2>Customer List</h2>
+                <span id="customerCount">Total Customers: 0</span>
+            </div>
+
+            
+            <div class="customer-toolbar">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by name, email or phone"
+                >
+
+                <button type="button" id="clearSearchBtn" class="secondary-btn">
+                    Clear
+                </button>
+
+                <select id="sortOrder" aria-label="Sort customers">
+                    <option value="asc">Name: A to Z</option>
+                    <option value="desc">Name: Z to A</option>
+                </select>
+
+                <button type="button" id="exportBtn">
+                    Export to CSV
+                </button>
+            </div>
 
             <table>
 
